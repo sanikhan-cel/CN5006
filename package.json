@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sanikhan-cel/CN5006#readme",
   "dependencies": {
+    "express": "^5.3.0",
     "mongoose": "^9.11.4"
   }
 }
