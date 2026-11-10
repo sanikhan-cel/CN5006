@@ -105,12 +105,19 @@ async function main() {
 
         await mongoose.connect(MONGO_URI); 
         console.log('Connected to MongoDB Atlas.');
- 
-        const results = await Person.find({ city: 'London' })
-            .select('name age gender city');
 
-        console.log('People living in London:');
-        results.forEach(person => console.log(person));
+        // Query about people living in London await
+await insertOne();
+await insertmany();
+const results = await Person.find({ city: 'London' })
+.select('name age gender city');
+
+console.log('People living in London:');
+
+results.forEach(person => {
+    console.log(person);
+});
+
         } catch (err) { 
  
         console.error('Error:', err); 
